@@ -1,17 +1,28 @@
-from views.aprendiz_view import registrar_aprendiz, listar_aprendices
+from templates.aprendiz_template import create_trainee
+from models.trainee_model import register_trainee, get_all
+from views import aprendiz_view
 
 def main():
+    aprendiz_view.init_app_data()
+
     while True:
-        print("\n============REGISTRO DE ESTUDIANTE==============")
 
-        registrar_aprendiz()
+        datos = aprendiz_view.input_trainee()
 
-        continuar = input("\n¿Desea registrar otro estudiante? (SI o NO): ").upper()
+        trainee = create_trainee(*datos)
 
-        if continuar != "SI":
+        if register_trainee(trainee):
+            print("\nAprendiz registrado exitosamente.")
+        else:
+            print("\nEl aprendiz ya está registrado.")
+
+        continuar = input("\n¿Desea registrar otro aprendiz? (si/no): ").lower()
+        if continuar != 'si':
+            aprendiz_view.show_trainees(get_all())
             break
 
-    listar_aprendices()
+        aprendiz_view.show_trainees(get_all())
 
 if __name__ == "__main__":
     main()
+
