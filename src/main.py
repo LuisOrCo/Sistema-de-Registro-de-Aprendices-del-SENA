@@ -16,12 +16,11 @@ def main():
         else:
             print("\nEl aprendiz ya está registrado.")
 
-        continuar = input("\n¿Desea registrar otro aprendiz? (si/no): ").lower()
-        if continuar != 'si':
+        continuar = aprendiz_view.input_continue()
+
+        if continuar == "no":
             aprendiz_view.show_trainees(get_all())
             break
-
-        aprendiz_view.show_trainees(get_all())
 
 if __name__ == "__main__":
     main()

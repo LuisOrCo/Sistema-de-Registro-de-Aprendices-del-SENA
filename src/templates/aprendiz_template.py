@@ -1,4 +1,4 @@
-def create_trainee(tipo_doc, documento, nombre, apellidos, ficha, programa):
+def create_trainee(tipo_doc, documento, nombre, apellidos, ficha, programa, correo):
     return{
         "tipo_documento": tipo_doc,
         "documento": documento,
@@ -6,4 +6,5 @@ def create_trainee(tipo_doc, documento, nombre, apellidos, ficha, programa):
         "apellidos": apellidos,
         "ficha": ficha,
         "programa": programa,
+        "correo": correo
     }

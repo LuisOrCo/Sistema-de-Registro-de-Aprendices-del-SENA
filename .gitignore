@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 
 # Datos
-/data/aprendices.json
+/data/trainees.json
 
 # Scripts
 *.sh
