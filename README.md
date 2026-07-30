@@ -14,7 +14,7 @@ Proyecto en python para la gestion de aprendices SENA mediante la consola.
 *   Programa
 
 # 📁 Estructura del Proyecto
-# 📁 Estructura del Proyecto
+
 
 ```text
 taller1_pyfastapi/
