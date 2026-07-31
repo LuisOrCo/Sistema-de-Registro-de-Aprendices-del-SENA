@@ -40,3 +40,18 @@ def register_trainee(new_trainee):
     trainees.append(new_trainee)
     save_data()
     return True
+
+def update_trainee(document, updated_data):
+    for i, a in enumerate(trainees):
+        if a["documento"] == document:
+            trainees[i].update(updated_data)
+            save_data()
+            return True
+
+def trainee_delete(document):
+    for i, a in enumerate(trainees):
+        if a["documento"] == document:
+            del trainees[i]
+            save_data()
+            return True
+    return False
