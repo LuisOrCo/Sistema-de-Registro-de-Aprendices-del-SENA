@@ -90,3 +90,20 @@ def show_trainees(trainees):
         print(f"Ficha: {trainee['ficha']}")
         print(f"Programa: {trainee['programa']}")
         print(f"Correo Electrónico: {trainee['correo']}")
+
+
+def menu():
+    """Muestra el menú principal y devuelve la opción seleccionada por el usuario."""
+    print("\n========= MENÚ PRINCIPAL ==========")
+    print("1. Registrar aprendiz")
+    print("2. Mostrar aprendices registrados")
+    print("3. Editar aprendiz")
+    print("4. Salir")
+
+    while True:
+        opcion = input("Seleccione una opción (1-4): ")
+
+        if opcion in ("1", "2", "3", "4"):
+            return opcion
+
+        print("Error: opción inválida. Por favor, seleccione 1, 2, 3 o 4.")

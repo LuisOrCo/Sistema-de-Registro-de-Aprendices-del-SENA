@@ -3,8 +3,9 @@ __pycache__/
 *.py[cod]
 
 # Datos
-/data/trainees.json
+trainees.json
 
 # Scripts
 *.sh
 *.bat
+
