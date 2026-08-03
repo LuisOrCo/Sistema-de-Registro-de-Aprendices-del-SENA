@@ -110,9 +110,15 @@ def menu():
         elif opcion == "5":
             delete_trainee()
         elif opcion == "6":
+            export_trainees()
+        elif opcion == "7":
             aprendiz_template.display_message("Saliendo del programa. ¡Hasta luego!")
             break
         else:
-            aprendiz_template.display_message("Opción inválida. Por favor, seleccione una opción válida (1-6).")
+            aprendiz_template.display_message("Opción inválida. Por favor, seleccione una opción válida (1-7).")
 
-            
+def export_trainees():
+    if trainee_model.export_to_csv():
+        aprendiz_template.display_message(
+            "Lista de aprendices exportada correctamente."
+        )

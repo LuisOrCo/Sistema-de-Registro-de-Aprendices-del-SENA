@@ -8,9 +8,10 @@ def display_menu():
     print("3. Buscar aprendiz por documento")
     print("4. Actualizar aprendiz")
     print("5. Eliminar aprendiz")
-    print("6. Salir")
+    print("6. Exportar aprendices a CSV")
+    print("7. Salir")
 
-    opcion = input("Seleccione una opción (1-6): ").strip()
+    opcion = input("Seleccione una opción (1-7): ").strip()
 
     return opcion
 

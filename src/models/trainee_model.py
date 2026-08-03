@@ -1,5 +1,6 @@
 import json
 import os
+import csv
 
 DATABASE_FILE = os.path.join(os.path.dirname(__file__), "..", "..", "data", "trainees.json")
 
@@ -55,3 +56,22 @@ def trainee_delete(document):
             save_data()
             return True
     return False
+
+
+def export_to_csv():
+    with open("aprendices.csv", "w", newline="", encoding="utf-8") as archivo:
+        campos = [
+            "tipo_documento",
+            "documento",
+            "nombres",
+            "apellidos",
+            "ficha",
+            "programa",
+            "correo"
+        ]
+
+        escritor = csv.DictWriter(archivo, fieldnames=campos)
+        escritor.writeheader()
+        escritor.writerows(trainees)
+
+    return True

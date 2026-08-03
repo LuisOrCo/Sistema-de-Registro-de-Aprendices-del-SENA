@@ -1,0 +1,20 @@
+[
+    {
+        "tipo_documento": "TI",
+        "documento": "1025766007",
+        "nombres": "Luis Ángel",
+        "apellidos": "Ortega Correa",
+        "ficha": "3406204",
+        "programa": "ADSO",
+        "correo": "angelortegacorrea09@gmail.com"
+    },
+    {
+        "tipo_documento": "CC",
+        "documento": "10257660089",
+        "nombres": "Breiner",
+        "apellidos": "Ocampo Arteaga",
+        "ficha": "3406204",
+        "programa": "ADSO",
+        "correo": "breiner@gmail.com"
+    }
+]
