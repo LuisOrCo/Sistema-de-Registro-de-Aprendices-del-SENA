@@ -72,7 +72,7 @@ def update_trainee():
         aprendiz_template.display_message(error_message)
         return
 
-    trainee_model.update_trainee(trainee, updated_data)
+    trainee_model.update_trainee(trainee["documento"], updated_data)
     aprendiz_template.display_message("Aprendiz actualizado exitosamente.")
 
 
@@ -86,7 +86,7 @@ def delete_trainee():
         return
 
     if aprendiz_template.comfirmation_prompt("¿Está seguro de que desea eliminar este aprendiz?"):
-        trainee_model.trainee_delete(trainee)
+        trainee_model.trainee_delete(trainee["documento"])
         aprendiz_template.display_message("Aprendiz eliminado exitosamente.")
     else:
         aprendiz_template.display_message("Operación cancelada. El aprendiz no fue eliminado.")
